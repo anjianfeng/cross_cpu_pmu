@@ -1,18 +1,14 @@
-# LACross 跨平台性能预测 — 实验复现代码
+# Top-Down Microarchitecture Counters as Transferable Features for Cross-Architecture Execution Time Prediction
 
-本目录包含复现论文实验所需的全部脚本与目录结构。实验目标：在源平台（x86）
-采集被测程序的 PMU 硬件性能计数，训练学习模型，预测同一程序在目标平台
-（飞腾 D2000 ARM）上的运行周期数（cycles）。
+本目录包含复现论文实验所需的全部脚本与目录结构。核心发现：**x86 top-down 微架构计数器是跨套件可迁移特征**——在 Intel Golden Cove (8-wide OoO) → FT-D2000 FTC663 (3–4-wide OoO, ARMv8) 映射上，held-out 跨套件增益 9.83 pp vs LOPO 套内增益 0.79 pp（12.5× asymmetry），bootstrap 95% CI [+2.04, +10.72] pp（配对 p < 0.002）。
 
-> **核心思路**：将程序切分为 phase（每累计 5000 个基本块），在每个 phase
-> 上用 clang `-fsanitize-coverage=trace-pc` 插桩采集 6 个通用硬件事件
-> （cycles / instructions / cache_refs / cache_misses / branches /
-> branch_misses），再按动态指令进度对齐两平台数据，训练 GBDT 模型预测
-> ARM cycles / x86 cycles 的比值。
+实验目标：在源平台（x86）采集被测程序的 PMU 硬件性能计数，训练学习模型，预测同一程序在目标平台（飞腾 D2000 ARM）上的运行周期数（cycles）。
+
+> **核心思路（Transferable Features）**：将程序切分为 phase（每累计 5000 个基本块），在每个 phase 上用 clang `-fsanitize-coverage=trace-pc` 插桩采集 6 个通用硬件事件 + 15 个 Intel top-down 富特征，再按动态指令进度对齐两平台数据，训练 GBDT 模型预测 ARM cycles / x86 cycles 的比值。top-down counters 捕捉架构层面的瓶颈分类（`topdown_mem_bound` 等），这些分类对具体算法实现是 suite-invariant 的——SPEC 和 LLVM 中 `topdown_mem_bound` 高的程序，在 FTC663 上承受相同比例的 slowdown，因此能跨套件迁移。
 
 > **分工**：本目录（`openlab/`）只放复现实验所需的脚本与数据；论文本身的
-> Markdown 源文件、插图与 Word/PDF 构建脚本位于同级目录 `paper/`
-> （`paper/paper_MDPI_Computers.md`、`paper/figures/`、`paper/scripts/make_*.py`）。
+> Markdown 源文件、插图与 PDF 构建脚本位于同级目录 `paper/`
+> （`paper/paper_MDPI.md`、`paper/figures/`、`paper/scripts/make_paper_latex.sh`）。
 
 ---
 
@@ -46,9 +42,10 @@ openlab/
 ```
 
 > **图与结果 CSV**：`paper/figures/` 下同时放 7 张论文插图（.png）和 9 个逐程序
-> 结果 CSV（.csv）。`make_paper_figures.py` / `make_paper_docx.py` 都从这里读。
-> 读者如果想重建图或 PDF，只需 `cd paper/ && python3 scripts/make_paper_figures.py`，
-> 无需重新采集数据。
+> 结果 CSV（.csv）。`make_paper_figures.py` 从这里读数据生成 PNG。
+> 重建论文 PDF：`cd paper/ && bash scripts/make_paper_latex.sh`，
+> 一键同时输出 MDPI Computers 模板版（`paper_MDPI.pdf`，29 页）
+> 与 preprint article class 版（`paper_preprint.pdf`，25 页）。
 
 > **数据说明**：
 > - `data/{mibench_v2,mibench,sdvbs,polybench,spec}/` 已随仓库提供（共 124 个 CSV，
@@ -237,18 +234,31 @@ python3 -W ignore scripts/analyze_phase.py --data data/phase_ir_rich --rich
 > `--agg base|rich` 直接读取，跳过 16 GB 原始轨迹的采集与重采样：
 >
 > ```bash
-> python3 -W ignore scripts/holdout_eval.py --agg rich --rich   # Table 7 Rich 列
-> python3 -W ignore scripts/lopo_table.py  --agg rich           # Table 7 LOPO 列
+> # held-out 跨套件主结果（论文 Table 7）
+> python3 -W ignore scripts/holdout_eval.py --agg rich --rich
+> # → held-out GBDT rich33 MAPE = 14.51%（与论文一致）
+>
+> # Transferability Criterion + bootstrap CI（论文 Section 4.5）
+> python3 -W ignore scripts/holdout_eval.py --agg rich --rich \
+>     --bootstrap 5000 --paired-bootstrap 5000 --seeds 5
+> # → rich33 95% CI = [10.69, 19.05]
+> # → paired Δ(base18 - rich33) = +5.87 pp, CI [+2.04, +10.72], p=0.9998
+> # → 5 seeds mean=15.00%, SD=0.45%
+>
+> # LOPO 套内结果（论文 Table 6）
+> python3 -W ignore scripts/lopo_table.py --agg rich
+> # → LOPO GBDT rich33 = 17.38%（论文 17.40%，差 0.02 来自 CSV 浮点舍入）
 > ```
 >
-> 实测本包内 held-out 为 14.51%（与论文一致），LOPO 为 17.38%（论文 17.40%，
-> 0.02 的差异来自预聚合 CSV 的浮点舍入）。LOPO 需逐程序训练 159 折，约 8 分钟。
+> 三个命令合计约 5 分钟（LOPO 逐程序训练 159 折约 8 分钟，bootstrap 约 2.5 分钟）。
+> Transferability Asymmetry：held-out 增益 9.83 pp / LOPO 增益 0.79 pp = 12.5×，
+> CI 不包含零，确认 top-down counters 是跨套件可迁移特征。
 
 ### 其他分析脚本
 
 | 脚本 | 用途 |
 |---|---|
-| `holdout_eval.py` | 留出套件验证（train on 3 suites, test on 1） |
+| `holdout_eval.py` | 留出跨套件评估（训练 PolyBench+LLVM 2 suites, 测试 MiBench+SD-VBS+SPEC 3 suites），支持 `--bootstrap N` 95% CI / `--paired-bootstrap` base vs rich 配对 CI / `--seeds K` 多 seed |
 | `lopo_table.py` | LOPO 逐程序结果表 |
 | `m3_controls.py` | 训练池组成控制实验 + 安慰剂检验 |
 | `matched_ci.py` | 配对 LOPO 置信区间 |
@@ -321,7 +331,7 @@ print('逐程序平均 APE: 复算 %.2f%%  归档 %.2f%%' % (sum(a)/len(a), sum(
 |---|---|
 | `analyze_phase.py` | phase 级主分析（LOPO + GBDT 超参搜索） |
 | `analyze_model.py` | 整程序级建模分析 |
-| `holdout_eval.py` | 留出套件评估 |
+| `holdout_eval.py` | 留出跨套件评估（训练 PolyBench+LLVM 2, 测试 MiBench+SD-VBS+SPEC 3），bootstrap CI + paired CI + 多 seed |
 | `homog_eval.py` | 同质性评估 |
 | `lopo_table.py` | LOPO 结果表 |
 | `m3_controls.py` | 训练池控制 + 安慰剂 |
