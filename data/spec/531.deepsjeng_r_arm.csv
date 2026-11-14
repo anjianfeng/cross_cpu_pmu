@@ -1,0 +1,7 @@
+program,group,rep,L1-dcache-load-misses,L1-dcache-loads,L1-icache-load-misses,L1-icache-loads,armv8_pmuv3_0/br_mis_pred/,armv8_pmuv3_0/br_pred/,armv8_pmuv3_0/bus_access/,armv8_pmuv3_0/bus_cycles/,armv8_pmuv3_0/cid_write_retired/,armv8_pmuv3_0/cpu_cycles/,armv8_pmuv3_0/exc_return/,armv8_pmuv3_0/exc_taken/,armv8_pmuv3_0/inst_retired/,armv8_pmuv3_0/inst_spec/,armv8_pmuv3_0/l1d_cache/,armv8_pmuv3_0/l1d_cache_refill/,armv8_pmuv3_0/l1d_cache_wb/,armv8_pmuv3_0/l1d_tlb_refill/,armv8_pmuv3_0/l1i_cache/,armv8_pmuv3_0/l1i_cache_refill/,armv8_pmuv3_0/l1i_tlb_refill/,armv8_pmuv3_0/l2d_cache/,armv8_pmuv3_0/l2d_cache_refill/,armv8_pmuv3_0/l2d_cache_wb/,armv8_pmuv3_0/mem_access/,armv8_pmuv3_0/memory_error/,armv8_pmuv3_0/ttbr_write_retired/,branch-load-misses,branch-loads,cache-misses,cache-references,dTLB-load-misses,iTLB-load-misses
+531.deepsjeng_r,0,0,188217823,12346689454,16091056,16263867905,279188019,5434597825,,,,27300683457,,,36530855794,,,,,,,,,,,,,,,,,,,,
+531.deepsjeng_r,1,0,,,,,,,278109689,27204063751,0,27203844820,119416,119328,36538594934,34996141950,,,,,,,,,,,,,,,,,,,
+531.deepsjeng_r,2,0,,,,,,,,,,27285746783,,,36544096103,,12346929198,186823367,42383124,24924344,16275843749,16116881,,,,,,,,,,,,,
+531.deepsjeng_r,3,0,,,,,,,,,,26910852783,,,36520569331,,,,,,,,33443,351489347,19232071,49872410,12372779171,0,,,,,,,
+531.deepsjeng_r,4,0,,,,,,,,,,27739325713,,,36534530659,,,,,,,,,,,,,,238299,280040875,5444965896,272985210,12358078542,24882088,
+531.deepsjeng_r,5,0,,,,,,,,,,27168753095,,,36533497335,,,,,,,,,,,,,,,,,,,,177032

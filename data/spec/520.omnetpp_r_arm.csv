@@ -1,0 +1,7 @@
+program,group,rep,L1-dcache-load-misses,L1-dcache-loads,L1-icache-load-misses,L1-icache-loads,armv8_pmuv3_0/br_mis_pred/,armv8_pmuv3_0/br_pred/,armv8_pmuv3_0/bus_access/,armv8_pmuv3_0/bus_cycles/,armv8_pmuv3_0/cid_write_retired/,armv8_pmuv3_0/cpu_cycles/,armv8_pmuv3_0/exc_return/,armv8_pmuv3_0/exc_taken/,armv8_pmuv3_0/inst_retired/,armv8_pmuv3_0/inst_spec/,armv8_pmuv3_0/l1d_cache/,armv8_pmuv3_0/l1d_cache_refill/,armv8_pmuv3_0/l1d_cache_wb/,armv8_pmuv3_0/l1d_tlb_refill/,armv8_pmuv3_0/l1i_cache/,armv8_pmuv3_0/l1i_cache_refill/,armv8_pmuv3_0/l1i_tlb_refill/,armv8_pmuv3_0/l2d_cache/,armv8_pmuv3_0/l2d_cache_refill/,armv8_pmuv3_0/l2d_cache_wb/,armv8_pmuv3_0/mem_access/,armv8_pmuv3_0/memory_error/,armv8_pmuv3_0/ttbr_write_retired/,branch-load-misses,branch-loads,cache-misses,cache-references,dTLB-load-misses,iTLB-load-misses
+520.omnetpp_r,0,0,204761735,7388789226,65338404,7816351454,79677284,3421252219,,,,24753451321,,,15978317410,,,,,,,,,,,,,,,,,,,,
+520.omnetpp_r,1,0,,,,,,,679600832,24766405161,0,24766130618,59170,59612,15980860472,16706554886,,,,,,,,,,,,,,,,,,,
+520.omnetpp_r,2,0,,,,,,,,,,24707472493,,,15977316252,,7383545727,197699915,75580414,239516796,7810524525,65678170,,,,,,,,,,,,,
+520.omnetpp_r,3,0,,,,,,,,,,24745637158,,,15997220572,,,,,,,,14834460,612028278,86133279,83994453,7385845407,0,,,,,,,
+520.omnetpp_r,4,0,,,,,,,,,,24831767365,,,15991435317,,,,,,,,,,,,,,118639,79966999,3431017625,210019114,7400238126,239937606,
+520.omnetpp_r,5,0,,,,,,,,,,24724890923,,,15984436898,,,,,,,,,,,,,,,,,,,,14905290

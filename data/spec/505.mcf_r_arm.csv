@@ -1,0 +1,7 @@
+program,group,rep,L1-dcache-load-misses,L1-dcache-loads,L1-icache-load-misses,L1-icache-loads,armv8_pmuv3_0/br_mis_pred/,armv8_pmuv3_0/br_pred/,armv8_pmuv3_0/bus_access/,armv8_pmuv3_0/bus_cycles/,armv8_pmuv3_0/cid_write_retired/,armv8_pmuv3_0/cpu_cycles/,armv8_pmuv3_0/exc_return/,armv8_pmuv3_0/exc_taken/,armv8_pmuv3_0/inst_retired/,armv8_pmuv3_0/inst_spec/,armv8_pmuv3_0/l1d_cache/,armv8_pmuv3_0/l1d_cache_refill/,armv8_pmuv3_0/l1d_cache_wb/,armv8_pmuv3_0/l1d_tlb_refill/,armv8_pmuv3_0/l1i_cache/,armv8_pmuv3_0/l1i_cache_refill/,armv8_pmuv3_0/l1i_tlb_refill/,armv8_pmuv3_0/l2d_cache/,armv8_pmuv3_0/l2d_cache_refill/,armv8_pmuv3_0/l2d_cache_wb/,armv8_pmuv3_0/mem_access/,armv8_pmuv3_0/memory_error/,armv8_pmuv3_0/ttbr_write_retired/,branch-load-misses,branch-loads,cache-misses,cache-references,dTLB-load-misses,iTLB-load-misses
+505.mcf_r,0,0,1905798622,10737452380,1425773,19091460336,541416121,8611163897,,,,46469684821,,,26089617245,,,,,,,,,,,,,,,,,,,,
+505.mcf_r,1,0,,,,,,,4442842012,46456868694,0,46456455073,18225,18523,26040177312,37304988664,,,,,,,,,,,,,,,,,,,
+505.mcf_r,2,0,,,,,,,,,,46453601896,,,26103229611,,10758032773,1908755855,152674295,518204853,19141486817,1328008,,,,,,,,,,,,,
+505.mcf_r,3,0,,,,,,,,,,46661506752,,,26057173465,,,,,,,,63054,4294535252,550027347,562102887,10786033507,0,,,,,,,
+505.mcf_r,4,0,,,,,,,,,,46795781253,,,26105489615,,,,,,,,,,,,,,34606,543042764,8585789762,1904933219,10750099404,533615160,
+505.mcf_r,5,0,,,,,,,,,,46566645960,,,26080313886,,,,,,,,,,,,,,,,,,,,59250

@@ -1,0 +1,10 @@
+program,group,rep,armv8_pmuv3_0/cpu_cycles/,armv8_pmuv3_0/inst_retired/,armv8_pmuv3_0/l1d_cache/,armv8_pmuv3_0/l1d_cache_refill/,armv8_pmuv3_0/l1d_cache_wb/,armv8_pmuv3_0/l1d_tlb_refill/,armv8_pmuv3_0/l1i_cache/,armv8_pmuv3_0/l1i_cache_refill/,armv8_pmuv3_0/l1i_tlb_refill/,armv8_pmuv3_0/l2d_cache/,armv8_pmuv3_0/l2d_cache_refill/,armv8_pmuv3_0/l2d_cache_wb/,armv8_pmuv3_0/mem_access/,armv8_pmuv3_0/memory_error/,armv8_pmuv3_0/ttbr_write_retired/
+dijkstra,0,0,128592436,190617620,59710076,1862979,215535,95578,72514445,,,,,,,,
+dijkstra,0,1,104248971,190637947,59716100,563659,61865,92922,72412066,,,,,,,,
+dijkstra,0,2,104613551,190528098,59677160,535613,71302,90950,72377028,,,,,,,,
+dijkstra,1,0,114106588,190387448,,,,,,18703,2731,2144926,8389,5529,,,
+dijkstra,1,1,107330354,190536091,,,,,,22125,700,1622489,9973,6283,,,
+dijkstra,1,2,112674153,190515968,,,,,,20811,642,2597258,9300,6126,,,
+dijkstra,2,0,103147277,190553864,,,,,,,,,,,59703356,0,2302
+dijkstra,2,1,104853547,190486502,,,,,,,,,,,59674015,0,2302
+dijkstra,2,2,104262365,190491891,,,,,,,,,,,59675612,0,2300

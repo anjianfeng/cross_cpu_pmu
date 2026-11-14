@@ -1,0 +1,7 @@
+program,group,rep,L1-dcache-load-misses,L1-dcache-loads,L1-icache-load-misses,L1-icache-loads,armv8_pmuv3_0/br_mis_pred/,armv8_pmuv3_0/br_pred/,armv8_pmuv3_0/bus_access/,armv8_pmuv3_0/bus_cycles/,armv8_pmuv3_0/cid_write_retired/,armv8_pmuv3_0/cpu_cycles/,armv8_pmuv3_0/exc_return/,armv8_pmuv3_0/exc_taken/,armv8_pmuv3_0/inst_retired/,armv8_pmuv3_0/inst_spec/,armv8_pmuv3_0/l1d_cache/,armv8_pmuv3_0/l1d_cache_refill/,armv8_pmuv3_0/l1d_cache_wb/,armv8_pmuv3_0/l1d_tlb_refill/,armv8_pmuv3_0/l1i_cache/,armv8_pmuv3_0/l1i_cache_refill/,armv8_pmuv3_0/l1i_tlb_refill/,armv8_pmuv3_0/l2d_cache/,armv8_pmuv3_0/l2d_cache_refill/,armv8_pmuv3_0/l2d_cache_wb/,armv8_pmuv3_0/mem_access/,armv8_pmuv3_0/memory_error/,armv8_pmuv3_0/ttbr_write_retired/,branch-load-misses,branch-loads,cache-misses,cache-references,dTLB-load-misses,iTLB-load-misses
+557.xz_r,0,0,14758225,815336038,434630,1373137534,28831865,392873992,,,,2502640492,,,2561414510,,,,,,,,,,,,,,,,,,,,
+557.xz_r,1,0,,,,,,,82174791,2460994325,0,2461021383,70379,70238,2552563264,3126784829,,,,,,,,,,,,,,,,,,,
+557.xz_r,2,0,,,,,,,,,,2489294213,,,2558240010,,816130350,14754931,7617765,6581016,1380663170,426838,,,,,,,,,,,,,
+557.xz_r,3,0,,,,,,,,,,2469679697,,,2551509141,,,,,,,,5208,49599432,5453481,16217256,824917058,0,,,,,,,
+557.xz_r,4,0,,,,,,,,,,2471948846,,,2550569007,,,,,,,,,,,,,,145812,28834338,390561387,14851336,812253682,3355369,
+557.xz_r,5,0,,,,,,,,,,2463095287,,,2557707104,,,,,,,,,,,,,,,,,,,,8818

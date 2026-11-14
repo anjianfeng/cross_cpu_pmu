@@ -1,0 +1,7 @@
+program,group,rep,L1-dcache-load-misses,L1-dcache-loads,L1-icache-load-misses,L1-icache-loads,armv8_pmuv3_0/br_mis_pred/,armv8_pmuv3_0/br_pred/,armv8_pmuv3_0/bus_access/,armv8_pmuv3_0/bus_cycles/,armv8_pmuv3_0/cid_write_retired/,armv8_pmuv3_0/cpu_cycles/,armv8_pmuv3_0/exc_return/,armv8_pmuv3_0/exc_taken/,armv8_pmuv3_0/inst_retired/,armv8_pmuv3_0/inst_spec/,armv8_pmuv3_0/l1d_cache/,armv8_pmuv3_0/l1d_cache_refill/,armv8_pmuv3_0/l1d_cache_wb/,armv8_pmuv3_0/l1d_tlb_refill/,armv8_pmuv3_0/l1i_cache/,armv8_pmuv3_0/l1i_cache_refill/,armv8_pmuv3_0/l1i_tlb_refill/,armv8_pmuv3_0/l2d_cache/,armv8_pmuv3_0/l2d_cache_refill/,armv8_pmuv3_0/l2d_cache_wb/,armv8_pmuv3_0/mem_access/,armv8_pmuv3_0/memory_error/,armv8_pmuv3_0/ttbr_write_retired/,branch-load-misses,branch-loads,cache-misses,cache-references,dTLB-load-misses,iTLB-load-misses
+510.parest_r,0,0,888597127,12020127150,2569406,13337799923,116985546,4677945558,,,,27827195566,,,29485806309,,,,,,,,,,,,,,,,,,,,
+510.parest_r,1,0,,,,,,,3894951692,25918204823,0,25918265908,27749,26947,29503099242,28213242329,,,,,,,,,,,,,,,,,,,
+510.parest_r,2,0,,,,,,,,,,25938002920,,,29486539845,,12034188371,887868967,85462431,16631870,13332738754,2381859,,,,,,,,,,,,,
+510.parest_r,3,0,,,,,,,,,,25827835301,,,29475738005,,,,,,,,158217,2293484146,484144478,486218462,12035817415,0,,,,,,,
+510.parest_r,4,0,,,,,,,,,,26105937496,,,29501350989,,,,,,,,,,,,,,52688,117047267,4686139393,884843432,12019398936,27358703,
+510.parest_r,5,0,,,,,,,,,,26298195837,,,29485799354,,,,,,,,,,,,,,,,,,,,168994

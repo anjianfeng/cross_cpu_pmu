@@ -1,0 +1,10 @@
+program,group,rep,armv8_pmuv3_0/cpu_cycles/,armv8_pmuv3_0/inst_retired/,armv8_pmuv3_0/l1d_cache/,armv8_pmuv3_0/l1d_cache_refill/,armv8_pmuv3_0/l1d_cache_wb/,armv8_pmuv3_0/l1d_tlb_refill/,armv8_pmuv3_0/l1i_cache/,armv8_pmuv3_0/l1i_cache_refill/,armv8_pmuv3_0/l1i_tlb_refill/,armv8_pmuv3_0/l2d_cache/,armv8_pmuv3_0/l2d_cache_refill/,armv8_pmuv3_0/l2d_cache_wb/,armv8_pmuv3_0/mem_access/,armv8_pmuv3_0/memory_error/,armv8_pmuv3_0/ttbr_write_retired/
+sha,0,0,67201765,95194156,16072005,116741,40744,12847,29878029,,,,,,,,
+sha,0,1,66886474,95964561,16352914,94731,21895,20864,30118772,,,,,,,,
+sha,0,2,66725727,95175952,16084844,84841,16400,12702,29848457,,,,,,,,
+sha,1,0,66604240,95121149,,,,,,18887,1015,301897,64457,46425,,,
+sha,1,1,67097848,95209400,,,,,,18718,949,294654,65003,46884,,,
+sha,1,2,66107874,95067922,,,,,,16969,1350,272628,64009,46377,,,
+sha,2,0,65955747,95116909,,,,,,,,,,,16053175,0,896
+sha,2,1,66398325,95058242,,,,,,,,,,,16031852,0,894
+sha,2,2,66296811,95022847,,,,,,,,,,,16012858,0,894

@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Build artifacts
+build/
+*.o
+*.elf
+
+# Data: phase-level traces (data/phase*, ~16 GB) stay out of the repository.
+# The whole-program PMU CSVs (data/{spec,mibench,mibench_v2,sdvbs,polybench},
+# 2.8 MB total) are shipped so that program-level results can be reproduced
+# without re-collecting anything.
+data/*
+!data/*.csv
+!data/*.gz
+!data/*.txt
+!data/*.json
+!data/*.log
+!data/*/
+
+data/*/*
+!data/*/*.csv
+!data/*/.gitkeep
+
+# Benchmarks (download separately)
+benchmarks/
+
+# OS / editor
+.DS_Store
+*.swp

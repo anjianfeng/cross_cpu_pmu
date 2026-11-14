@@ -1,0 +1,93 @@
+[
+  {
+    "bench": "505.mcf_r",
+    "rundir": "/mnt/WD_6T/anjf/PMU/benchmarks/cpu2017/benchspec/CPU/505.mcf_r/run/run_base_test_x86n-64.0000",
+    "binary": "./mcf_r_base.x86n-64",
+    "args": [
+      "inp.in"
+    ]
+  },
+  {
+    "bench": "520.omnetpp_r",
+    "rundir": "/mnt/WD_6T/anjf/PMU/benchmarks/cpu2017/benchspec/CPU/520.omnetpp_r/run/run_base_test_x86n-64.0000",
+    "binary": "./omnetpp_r_base.x86n-64",
+    "args": [
+      "-c",
+      "General",
+      "-r",
+      "0"
+    ]
+  },
+  {
+    "bench": "531.deepsjeng_r",
+    "rundir": "/mnt/WD_6T/anjf/PMU/benchmarks/cpu2017/benchspec/CPU/531.deepsjeng_r/run/run_base_test_x86n-64.0000",
+    "binary": "./deepsjeng_r_base.x86n-64",
+    "args": [
+      "test.txt"
+    ]
+  },
+  {
+    "bench": "541.leela_r",
+    "rundir": "/mnt/WD_6T/anjf/PMU/benchmarks/cpu2017/benchspec/CPU/541.leela_r/run/run_base_test_x86n-64.0000",
+    "binary": "./leela_r_base.x86n-64",
+    "args": [
+      "test.sgf"
+    ]
+  },
+  {
+    "bench": "557.xz_r",
+    "rundir": "/mnt/WD_6T/anjf/PMU/benchmarks/cpu2017/benchspec/CPU/557.xz_r/run/run_base_test_x86n-64.0000",
+    "binary": "./xz_r_base.x86n-64",
+    "args": [
+      "cpu2006docs.tar.xz",
+      "4",
+      "055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae",
+      "1548636",
+      "1555348",
+      "0"
+    ]
+  },
+  {
+    "bench": "508.namd_r",
+    "rundir": "/mnt/WD_6T/anjf/PMU/benchmarks/cpu2017/benchspec/CPU/508.namd_r/run/run_base_test_x86n-64.0000",
+    "binary": "./namd_r_base.x86n-64",
+    "args": [
+      "--input",
+      "apoa1.input",
+      "--iterations",
+      "1",
+      "--output",
+      "apoa1.test.output"
+    ]
+  },
+  {
+    "bench": "510.parest_r",
+    "rundir": "/mnt/WD_6T/anjf/PMU/benchmarks/cpu2017/benchspec/CPU/510.parest_r/run/run_base_test_x86n-64.0000",
+    "binary": "./parest_r_base.x86n-64",
+    "args": [
+      "test.prm"
+    ]
+  },
+  {
+    "bench": "519.lbm_r",
+    "rundir": "/mnt/WD_6T/anjf/PMU/benchmarks/cpu2017/benchspec/CPU/519.lbm_r/run/run_base_test_x86n-64.0000",
+    "binary": "./lbm_r_base.x86n-64",
+    "args": [
+      "20",
+      "reference.dat",
+      "0",
+      "1",
+      "100_100_130_cf_a.of"
+    ]
+  },
+  {
+    "bench": "544.nab_r",
+    "rundir": "/mnt/WD_6T/anjf/PMU/benchmarks/cpu2017/benchspec/CPU/544.nab_r/run/run_base_test_x86n-64.0000",
+    "binary": "./nab_r_base.x86n-64",
+    "args": [
+      "hkrdenq",
+      "1930344093",
+      "1000"
+    ]
+  }
+]
